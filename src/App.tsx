@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, ChangeEvent, KeyboardEvent } from 'react'
 import './App.css'
 
 interface Quote {
@@ -43,6 +43,12 @@ function App() {
     setQuotes(newQuotes);
   }
 
+  function handleKeyDown(e: KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "Enter") {
+      searchAuthor();
+    }
+  }
+
   useEffect(() => {
     randomSearch();
   }, []);
@@ -51,7 +57,7 @@ function App() {
     <div className="App">
       <div>
         <h2>Quote Search</h2>
-        <input type="text" placeholder="Albert Einstein" onChange={e => setAuthor(e.target.value)}></input>
+        <input type="text" placeholder="Albert Einstein" onChange={e => setAuthor(e.target.value)} onKeyDown={e => handleKeyDown(e)}></input>
         <button onClick={searchAuthor}>Search</button>
       </div>
       <div className="output">
