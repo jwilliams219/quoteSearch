@@ -57,8 +57,8 @@ function App() {
     <div className="App">
       <div>
         <h2>Quote Search</h2>
-        <input type="text" placeholder="Albert Einstein" onChange={e => setAuthor(e.target.value)} onKeyDown={e => handleKeyDown(e)}></input>
-        <button onClick={searchAuthor}>Search</button>
+        <input type="text" placeholder="&#128269; Albert Einstein" onChange={e => setAuthor(e.target.value)} onKeyDown={e => handleKeyDown(e)}></input>
+        <button onClick={searchAuthor}>&#128269; Search</button>
       </div>
       <div className="output">
         {
