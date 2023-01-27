@@ -1,4 +1,4 @@
-import { useEffect, useState, ChangeEvent, KeyboardEvent } from 'react'
+import { useEffect, useState, KeyboardEvent } from 'react'
 import './App.css'
 
 interface Quote {
