@@ -61,5 +61,5 @@ h4 {
 .output {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding-top: 20px;
 }
