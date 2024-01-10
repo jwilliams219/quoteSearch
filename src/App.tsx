@@ -58,7 +58,7 @@ function App() {
       <div>
         <h2>Quote Search</h2>
         <input type="text" placeholder="&#128269; Albert Einstein" onChange={e => setAuthor(e.target.value)} onKeyDown={e => handleKeyDown(e)}></input>
-        <button onClick={searchAuthor}>&#128269; Search</button>
+        <button onClick={searchAuthor}>&#10148; Search</button>
       </div>
       <div className="output">
         {
@@ -69,7 +69,7 @@ function App() {
                 : <p>An error has occurred.</p>
               }
               {quote.author !== ""
-              ? <h4>-{quote.author}</h4>
+              ? <h4> - {quote.author}</h4>
               : <h4></h4>
               }
             </div>
